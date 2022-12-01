@@ -6,14 +6,17 @@ const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer);
 
-const PORT = 8080;
+const PORT = 3000;
 
 app.get('/', (req, res) => {
     res.sendFile('/index.html', {root: '.'});
 })
 
 io.on("connection", (socket) => {
-  console.log('ok')
+    console.log(socket.id+' is connected');
+    socket.on('user', (user) => {
+        socket.emit('maj', user);
+    })
 });
 
-httpServer.listen(3000);
+httpServer.listen(PORT);
