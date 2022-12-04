@@ -8,14 +8,16 @@ const io = new Server(httpServer);
 
 const PORT = 3000;
 
+app.use(express.static('app'));
+
 app.get('/', (req, res) => {
-    res.sendFile('/index.html', {root: '.'});
+    res.sendFile('/index.html');
 })
 
 io.on("connection", (socket) => {
     console.log(socket.id+' is connected');
     socket.on('user', (user) => {
-        socket.emit('maj', user);
+        socket.emit('socket', user);
     })
 });
 
