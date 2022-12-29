@@ -17,8 +17,10 @@ app.get('/', (req, res) => {
 io.on("connection", (socket) => {
     console.log(socket.id+' is connected');
     socket.on('user', (user) => {
-        socket.emit('socket', user);
+        console.log('SO : ', user);
+        io.sockets.emit('socket', user);
     })
+    
 });
 
 httpServer.listen(PORT);

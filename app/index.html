@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
-    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <h1>Truc</h1>
-    <div id="chat"></div>
-    <input type="text" id="pseudo">
-    <input type="text" id="message">
-    <button id="exp" onclick="envoyer()">Envoyer</button>
+    <div class="app">
+        <h1 class="app_title">Chat 🐱</h1>
+        <div id="chat"></div>
+        <div class="app_inputs">
+            <input type="text" id="pseudo" placeholder="Pseudo">
+            <input type="text" id="message" placeholder="Message">
+            <button id="exp" onclick="envoyer()">Envoyer</button>
+        </div>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/assets/chat.js"></script>
 </body>

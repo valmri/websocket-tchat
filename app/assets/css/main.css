@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500&family=Lato:wght@400;700&display=swap');
+
+
+body {
+    background-image: url(../img/cat.jpg);
+    background-size: 50%;
+}
+
+.app {
+    margin: auto;
+    width: 40%;
+    background-color: #fff;
+    border: 3px solid #949391;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #202020;
+}
+
+.app_title {
+    text-align: center;
+    font-family: 'Josefin Slab', serif;
+    font-size: 30px;
+    padding: 20px 0px;
+    /*font-family: 'Lato', sans-serif;*/
+}
+
+#chat {
+    border-top: 3px solid #949391;
+    border-bottom: 3px solid #949391;
+    overflow-y: scroll;
+}
+
+.app_inputs {
+    display: flex;
+}
+
+.app_inputs #pseudo {
+    width: 20%;
+}
+
+.app_inputs #message {
+    width: 100%;
+}
+
+#chat p {
+    padding: 10px;
+}
+
+#chat p.moi {
+    background-color: #ddd;
+}
